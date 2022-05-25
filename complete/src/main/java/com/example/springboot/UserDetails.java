@@ -23,6 +23,8 @@ public class UserDetails implements Serializable {
     }
 
     public static UserDetails randomUser() {
+        string password="123%!Z@1";
+
         Faker faker = new Faker(new Locale("en-GB"));
         return new UserDetails(faker.name().firstName(), faker.name().lastName(), faker.number().digits(11), faker.phoneNumber().cellPhone());
     }
